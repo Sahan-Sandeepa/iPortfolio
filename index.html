@@ -26,6 +26,34 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    /* Additional Inline CSS */
+    .animated-background {
+      background-image: url('assets/img/animated-background.gif');
+      background-size: cover;
+    }
+
+    .fixed-top {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+    }
+
+    .project-card {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease;
+    }
+  </style>
 </head>
 
 <body>
@@ -34,7 +62,7 @@
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
   <!-- ======= Header ======= -->
-  <header id="header">
+  <header id="header" class="fixed-top">
     <div class="d-flex flex-column">
 
       <div class="profile">
@@ -58,7 +86,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center animated-background">
     <div class="hero-container" data-aos="fade-in">
       <h1>Sahan Sandeepa</h1>
       <p>I'm <span class="typed" data-typed-items="Designer, Developer"></span></p>
@@ -98,11 +126,12 @@
         </div>
 
       </div>
+
     </section><!-- End About Section -->
 
-         <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills section-bg">
-        <div class="container">
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg" data-aos="fade-in">
+      <div class="container">
           <div class="section-title">
             <h2>Skills</h2>
             <p></p>
@@ -228,14 +257,12 @@
                     <br/>Firebase<br/></li><br/>
               </ul>
               
-            </div>
-            
+            </div>        
 
             
           </div>
         </div>
-      </section>
-      <!-- End Skills Section -->
+    </section><!-- End Skills Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -280,7 +307,7 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
+       <div class="container">
 
         <div class="section-title">
           <h2>Contact</h2>
@@ -319,15 +346,13 @@
 
             </div>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Back to Top"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -342,6 +367,12 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+  // Update current year in footer
+  document.querySelector('#2024').textContent = new Date().getFullYear();
+  </script>
+
 
 </body>
 
